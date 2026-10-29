@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    ============================================================
+    PORTFOLIO OF HUMUSALMA MANDEEYA ZAKARIA
+    ------------------------------------------------------------
+    HOW THIS FILE IS ORGANISED (top to bottom):
+      1. <header>  -> sticky navigation bar (+ mobile hamburger)
+      2. #home     -> hero / introduction
+      3. #about    -> about me
+      4. #skills   -> skills & competencies
+      5. #projects -> featured projects
+      6. #resume   -> education, leadership & fieldwork timeline
+      7. #contact  -> contact info + simple form
+      8. <footer>  -> footer
+
+    WANT TO CHANGE SOMETHING?
+      - Text:   just edit the words between the tags below.
+      - Colours / fonts / spacing: open css/style.css and look
+        at the :root { ... } block at the very top.
+      - Behaviour: open js/script.js (every part is commented).
+    ============================================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- What shows up in the browser tab & on Google -->
+  <title>Humusalma Mandeeya Zakaria | Software Developer & CS Student</title>
+  <meta name="description" content="Portfolio of Humusalma Mandeeya Zakaria — Computer Science student at the University for Development Studies (Ghana), software developer and data enthusiast.">
+
+  <!-- Nice font from Google (the site still works offline: it
+       simply falls back to the phone/laptop's own fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Our own stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- If a visitor has JavaScript turned OFF, make sure the
+       scroll-animation elements are still visible -->
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+
+<body>
+
+  <!-- ======================================================
+       1. NAVIGATION BAR (sticky at the top)
+       ====================================================== -->
+  <header class="site-header">
+    <nav class="container nav">
+      <!-- Logo / name on the left -->
+      <a href="#home" class="logo">Humusalma<span class="logo-dot">.dev</span></a>
+
+      <!-- Menu links (becomes a slide-in panel on phones) -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Résumé</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger button, only visible on small screens -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====================================================
+         2. HERO — the first thing visitors see
+         ==================================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <p class="hero-wave reveal">👋 Hi there, I'm</p>
+        <h1 class="reveal">Humusalma Mandeeya <span class="gradient-text">Zakaria</span></h1>
+        <p class="hero-role reveal">Computer Science Student &amp; Software Developer</p>
+        <p class="hero-blurb reveal">
+          I combine Python, JavaScript and SQL with real fieldwork insight to build
+          data-driven web &amp; mobile solutions — from rural community surveys in
+          Northern Ghana to open-source dashboards for SDG&nbsp;5 (Gender Equality).
+        </p>
+
+        <div class="hero-buttons reveal">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+
+        <div class="hero-social reveal">
+          <a href="https://github.com/humusalma-zakaria" target="_blank" rel="noopener">
+            <!-- GitHub icon (inline SVG so no image file is needed) -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:humusalmamandeeyazakaria@gmail.com">
+            <!-- Envelope icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>
+            Email
+          </a>
+        </div>
+
+        <!-- Quick numbers that catch the eye -->
+        <ul class="hero-stats reveal">
+          <li><strong>150+</strong><span>households surveyed</span></li>
+          <li><strong>30+</strong><span>students mentored</span></li>
+          <li><strong>1st</strong><span>class standing</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         3. ABOUT
+         ==================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow reveal">Get to know me</p>
+        <h2 class="section-title reveal">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I am a highly motivated and detail-oriented undergraduate Computer Science
+              student at the <strong>University for Development Studies (UDS)</strong>, passionate
+              about leveraging software development, data analytics and mobile technology to
+              address local and global sustainable development challenges.
+            </p>
+            <p>
+              My work combines practical tech stacks — <strong>Python, JavaScript and SQL</strong> —
+              with fieldwork insight gained through the UDS Third Trimester Field Practical
+              Programme (TTFPP), where I led digital data collection and analysis for rural
+              community assessments. On campus, I mentor first-year students in Python through
+              the Computer Science Students Association (COMPSSA).
+            </p>
+            <p>
+              I care about building software that is not just functional, but
+              <em>impactful and data-driven</em> — tools that help communities and
+              decision-makers act on evidence.
+            </p>
+          </div>
+
+          <!-- Quick facts card -->
+          <ul class="about-facts reveal">
+            <li><span class="fact-icon">📍</span><div><strong>Location</strong><br>Tamale, Northern Region, Ghana</div></li>
+            <li><span class="fact-icon">🎓</span><div><strong>Studying</strong><br>BSc Computer Science, UDS (expected 2029)</div></li>
+            <li><span class="fact-icon">💻</span><div><strong>Main stack</strong><br>Python · JavaScript · SQL · React</div></li>
+            <li><span class="fact-icon">🌍</span><div><strong>Languages</strong><br>English · Dagbani · Hausa</div></li>
+            <li><span class="fact-icon">🤝</span><div><strong>Open to</strong><br>Internships, collaborations &amp; open source</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         4. SKILLS
+         ==================================================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="eyebrow reveal">My toolbox</p>
+        <h2 class="section-title reveal">Skills &amp; Competencies</h2>
+
+        <div class="skills-grid">
+          <!-- Card 1 -->
+          <div class="skill-card reveal">
+            <div class="skill-icon">⌨️</div>
+            <h3>Programming Languages</h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>JavaScript (ES6+)</li>
+              <li>SQL</li>
+              <li>HTML5 / CSS3</li>
+              <li>Java</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="skill-card reveal">
+            <div class="skill-icon">🛠️</div>
+            <h3>Tools &amp; Frameworks</h3>
+            <ul class="chips">
+              <li>React.js</li>
+              <li>Node.js</li>
+              <li>Git / GitHub</li>
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>Kobo Toolbox</li>
+              <li>Pandas</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="skill-card reveal">
+            <div class="skill-icon">🧠</div>
+            <h3>Core Concepts</h3>
+            <ul class="chips">
+              <li>Mobile Data Collection</li>
+              <li>Data Visualization</li>
+              <li>Object-Oriented Programming</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         5. PROJECTS
+         ==================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="eyebrow reveal">What I've built</p>
+        <h2 class="section-title reveal">Featured Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-head">
+              <span class="project-icon">📊</span>
+              <span class="project-date">Jan 2026 – Present</span>
+            </div>
+            <h3>Gender Equity Tracking Dashboard</h3>
+            <p class="project-role">Developer · Open-Source Project</p>
+            <p>
+              A web application that aggregates and visualizes public data on women's
+              leadership representation, aligning with <strong>SDG 5 (Gender Equality)</strong>.
+            </p>
+            <ul class="project-points">
+              <li>Built with React.js on the front end and Node.js on the back end.</li>
+              <li>Interactive Chart.js dashboard makes statistical metrics digestible for civil-society policy tracking.</li>
+            </ul>
+            <ul class="tags">
+              <li>React.js</li><li>Node.js</li><li>Chart.js</li><li>SDG 5</li>
+            </ul>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="project-head">
+              <span class="project-icon">📱</span>
+              <span class="project-date">May 2025 – Jul 2025</span>
+            </div>
+            <h3>TTFPP Community Data Project</h3>
+            <p class="project-role">Technology &amp; Data Lead · UDS Field Practical Programme</p>
+            <p>
+              Digital data collection and analysis for a rural community assessment
+              profile in the Northern Region of Ghana.
+            </p>
+            <ul class="project-points">
+              <li>Designed &amp; deployed mobile surveys with Kobo Toolbox.</li>
+              <li>Cleaned and analysed 150+ household datasets with Python (Pandas) to map healthcare accessibility.</li>
+              <li>Presented visualizations to District Assembly representatives for evidence-based planning.</li>
+            </ul>
+            <ul class="tags">
+              <li>Kobo Toolbox</li><li>Python</li><li>Pandas</li><li>Data Viz</li>
+            </ul>
+          </article>
+
+          <!-- Card 3: link to GitHub -->
+          <a class="project-card project-card-more reveal" href="https://github.com/humusalma-zakaria" target="_blank" rel="noopener">
+            <span class="project-icon">🚀</span>
+            <h3>More on GitHub</h3>
+            <p>Coursework, experiments and side projects — come explore the code.</p>
+            <span class="more-link">github.com/humusalma-zakaria →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         6. RÉSUMÉ (timeline)
+         ==================================================== -->
+    <section class="section section-alt" id="resume">
+      <div class="container">
+        <p class="eyebrow reveal">My journey so far</p>
+        <h2 class="section-title reveal">Résumé &amp; Experience</h2>
+
+        <div class="timeline">
+          <!-- Entry 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">Oct 2023 – Present</p>
+            <h3>BSc Computer Science</h3>
+            <p class="timeline-meta">University for Development Studies (UDS) · Tamale, Ghana</p>
+            <p>
+              Expected completion 2029 · Consistent <strong>First Class</strong> standing.
+              Key coursework: Object-Oriented Programming, Data Structures &amp; Algorithms,
+              Database Management Systems, Web Development, Software Engineering, Research Methods.
+            </p>
+          </div>
+
+          <!-- Entry 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">Nov 2024 – Present</p>
+            <h3>Technical Committee Member</h3>
+            <p class="timeline-meta">UDS Computer Science Students Association (COMPSSA) · Tamale Campus</p>
+            <p>
+              Co-organize peer-to-peer coding bootcamps, mentoring 30+ first-year students in
+              Python and programming logic. Help plan departmental hackathons and coordinate
+              logistics for guest tech speakers.
+            </p>
+          </div>
+
+          <!-- Entry 3 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">May 2025 – Jul 2025</p>
+            <h3>Technology &amp; Data Lead — TTFPP</h3>
+            <p class="timeline-meta">University for Development Studies · Northern Region, Ghana</p>
+            <p>
+              Led digital mobile survey design (Kobo Toolbox), cleaned and analysed field data
+              from 150+ households with Python (Pandas), and presented automated statistical
+              findings to District Assembly representatives.
+            </p>
+          </div>
+
+          <!-- Entry 4 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">Jan 2026 – Present</p>
+            <h3>Developer — Gender Equity Dashboard</h3>
+            <p class="timeline-meta">Academic &amp; Personal Project · Tamale, Ghana</p>
+            <p>
+              Building an open-source React.js + Node.js dashboard that visualizes women's
+              leadership representation data for civil-society policy tracking (SDG 5).
+            </p>
+          </div>
+        </div>
+
+        <div class="resume-cta reveal">
+          <a class="btn btn-primary" href="Humusalma-Mandeeya-Zakaria-CV.pdf" download>
+            📄 Download My CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         7. CONTACT
+         ==================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="eyebrow reveal">Say hello</p>
+        <h2 class="section-title reveal">Contact Me</h2>
+
+        <div class="contact-grid">
+          <!-- Left: contact details -->
+          <div class="contact-info reveal">
+            <p>
+              Whether you have a project idea, an internship opportunity, or just want to
+              talk about data and software for development — my inbox is always open.
+            </p>
+            <ul class="contact-cards">
+              <li>
+                <a href="mailto:humusalmamandeeyazakaria@gmail.com">
+                  <span class="contact-icon">📧</span>
+                  <div><strong>Email</strong><br>humusalmamandeeyazakaria@gmail.com</div>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+233534579666">
+                  <span class="contact-icon">📞</span>
+                  <div><strong>Phone</strong><br>+233 (0) 53 457 9666</div>
+                </a>
+              </li>
+              <li class="contact-card-static">
+                <span class="contact-icon">📍</span>
+                <div><strong>Location</strong><br>Tamale, Northern Region, Ghana</div>
+              </li>
+              <li>
+                <a href="https://github.com/humusalma-zakaria" target="_blank" rel="noopener">
+                  <span class="contact-icon">🐙</span>
+                  <div><strong>GitHub</strong><br>github.com/humusalma-zakaria</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: simple form.
+               NOTE: a static site has no server, so the form simply
+               opens the visitor's email app with the message pre-filled
+               (the JavaScript at the bottom does this). -->
+          <form class="contact-form reveal" id="contactForm">
+            <label for="formName">Your name</label>
+            <input type="text" id="formName" name="name" placeholder="Ama Mensah" required>
+
+            <label for="formEmail">Your email</label>
+            <input type="email" id="formEmail" name="email" placeholder="ama@example.com" required>
+
+            <label for="formMessage">Message</label>
+            <textarea id="formMessage" name="message" rows="5" placeholder="Hi Humusalma, ..." required></textarea>
+
+            <button type="submit" class="btn btn-primary btn-full">Send Message ✉️</button>
+            <p class="form-note">This form opens your email app — no server needed.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================
+       8. FOOTER
+       ====================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Humusalma Mandeeya Zakaria</p>
+      <p class="footer-note">Built with plain HTML, CSS &amp; a little JS — no frameworks. 💚</p>
+    </div>
+  </footer>
+
+  <!-- "Back to top" floating button (appears after scrolling) -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Our JavaScript (kept in its own file, fully commented) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
