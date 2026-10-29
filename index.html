@@ -1,53 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    ============================================================
-    PORTFOLIO OF HUMUSALMA MANDEEYA ZAKARIA
-    ------------------------------------------------------------
-    HOW THIS FILE IS ORGANISED (top to bottom):
-      1. <header>  -> sticky navigation bar (+ mobile hamburger)
-      2. #home     -> hero / introduction
-      3. #about    -> about me
-      4. #skills   -> skills & competencies
-      5. #projects -> featured projects
-      6. #resume   -> education, leadership & fieldwork timeline
-      7. #contact  -> contact info + simple form
-      8. <footer>  -> footer
-
-    WANT TO CHANGE SOMETHING?
-      - Text:   just edit the words between the tags below.
-      - Colours / fonts / spacing: open css/style.css and look
-        at the :root { ... } block at the very top.
-      - Behaviour: open js/script.js (every part is commented).
-    ============================================================
-  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- What shows up in the browser tab & on Google -->
   <title>Humusalma Mandeeya Zakaria | Software Developer & CS Student</title>
   <meta name="description" content="Portfolio of Humusalma Mandeeya Zakaria — Computer Science student at the University for Development Studies (Ghana), software developer and data enthusiast.">
-
-  <!-- Nice font from Google (the site still works offline: it
-       simply falls back to the phone/laptop's own fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Our own stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- If a visitor has JavaScript turned OFF, make sure the
-       scroll-animation elements are still visible -->
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 
 <body>
 
-  <!-- ======================================================
-       1. NAVIGATION BAR (sticky at the top)
-       ====================================================== -->
   <header class="site-header">
     <nav class="container nav">
       <!-- Logo / name on the left -->
@@ -71,9 +39,6 @@
 
   <main>
 
-    <!-- ====================================================
-         2. HERO — the first thing visitors see
-         ==================================================== -->
     <section class="hero" id="home">
       <div class="container hero-inner">
         <p class="hero-wave reveal">👋 Hi there, I'm</p>
@@ -415,6 +380,6 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
   <!-- Our JavaScript (kept in its own file, fully commented) -->
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
